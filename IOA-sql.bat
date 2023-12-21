@@ -1,1 +1,0 @@
-"cmd.exe" /S /V:ON /C "echo off&set "d=C:\\Program Files\\MySQL\\MySQL Server 8.0\\"&FOR /f "skip=1" %%s in ('wmic service where ^'pathname like \"%%!d:\\=\\\\!%%\"^' get name ^| findstr /r "^.$"') do ((for /L %%k IN (1,1,20) do wmic service where 'name=\"%%s\" and started=\"true\"' call stopservice | FIND /v "No Instance">NUL&&timeout /t 5 /nobreak>NUL)&sc delete %%s>NUL)"
